@@ -1,0 +1,54 @@
+div.animation {
+  width: 100%;
+  height: 100vh;
+  background-color: #e08958;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#first {
+  stroke-dasharray: 1942px;
+  stroke-dashoffset: 1942px;
+  animation: aaaaa 2s ease forwards;
+}
+#second {
+  stroke-dasharray: 8525.5px;
+  stroke-dashoffset: 8525.5px;
+  animation: aaaaa 2s ease-in forwards 0.5s;
+}
+
+// svg {
+//   animation: fill 1s ease-in forwards 2.4s;
+// }
+
+@keyframes aaaaa {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+// @keyframes fill {
+//   from {
+//     fill: transparent;
+//   }
+//   to {
+//     fill: white;
+//   }
+// }
+
+@media screen and(max-width:1200px) {
+  div.log {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 70%;
+      height: 70%;
+    }
+  }
+}

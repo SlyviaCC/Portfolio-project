@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", serif;
+}
+body {
+  img.bgi {
+    width: 50vw;
+    height: 150vh;
+    position: absolute;
+    top: -10vh;
+    right: 0;
+    z-index: -1;
+  }
+}
+header {
+  nav {
+    // 我不理解为什么这个位置上的sticky没有贴上去呢，滚动滑鼠的时候没用
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0px; /*贴在top为0这个位置*/
+    z-index: 5; /*为了防止被其他内容挡住*/
+    box-shadow: 0 5px 10px -1px grey;
+    border: 1px solid blue;
+    ul {
+      width: 65vw;
+      margin: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      li {
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: black;
+        }
+        a:hover {
+          color: rgb(153, 59, 25);
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  section.left {
+    margin: 3rem;
+    flex: 3 1 500px;
+    h1 {
+      color: #e08958;
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+      padding: 0.3rem;
+    }
+  }
+  section.right {
+    position: relative;
+    flex: 1 1 600px;
+    img {
+      position: absolute;
+      right: 18rem;
+      top: 15rem;
+      width: 16.5rem;
+      height: 16.5rem;
+      border-radius: 50%;
+    }
+  }
+}
+footer {
+  position: relative;
+  bottom: 2rem;
+  width: 100vw;
+  margin: 3rem;
+  img {
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+  }
+}
+
+// page2
+main {
+  section.page2table {
+    display: flex;
+    flex: 2 1 400px;
+    flex-wrap: wrap;
+    table {
+      border-collapse: collapse;
+      font-size: 1.25rem;
+      margin-top: 3.5rem;
+      margin-left: 2.5rem;
+      tr {
+        border-bottom: 2px solid #e08a5837;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        td {
+          padding: 0.95rem;
+          display: flex;
+        }
+        &:hover {
+          background-color: #e08a5837;
+        }
+      }
+    }
+  }
+  section.page2pic {
+    position: relative;
+    display: flex;
+    flex: 1 1 500px;
+    img {
+      position: absolute;
+      right: 18rem;
+      top: 5rem;
+      width: 20vw;
+      height: 50vh;
+      z-index: 1;
+      box-shadow: 3.5rem 3rem 0.15rem #e08958;
+    }
+    // div.orangerect {
+    //   position: absolute;
+    //   right: 13rem;
+    //   top: 8rem;
+    //   width: 20vw;
+    //   height: 50vh;
+    //   background-color: #e08958;
+    // }
+  }
+}
+
+// page3
+main {
+  section.form1 {
+    margin: 5.5rem 3rem;
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    height: 55vh;
+
+    div.fo {
+      display: flex;
+      flex: 1 1 700px;
+      justify-content: center;
+      align-content: space-around;
+      margin-bottom: 1rem;
+
+      button {
+        width: 8rem;
+        height: 3rem;
+        font-size: 1.25rem;
+        margin-left: 3.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 5rem;
+        background-color: #e08958;
+        border-radius: 2rem;
+        cursor: pointer;
+        &:hover {
+          background-color: #f0803f;
+        }
+      }
+
+      input {
+        width: 25vw;
+        background-color: #e08a5890;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 0.5rem 0.35rem;
+        font-size: 1.25rem;
+      }
+
+      textarea {
+        width: 25vw;
+        height: 15vh;
+        vertical-align: top;
+        background-color: #e08a58a9;
+        color: white;
+        border: none;
+        padding: 0.5rem 0.35rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+  //第3页右边的部分
+  section.time1 {
+    margin: 5.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 600px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 3.5rem;
+    border-left: 2px solid rgba(128, 128, 128, 0.453);
+    height: 55vh;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  img.bgi {
+    opacity: 0.5;
+  }
+  nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+  main {
+    section.right {
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+      img {
+        position: static;
+        width: 15rem;
+        height: 15rem;
+      }
+    }
+    section.page2pic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        position: static;
+        margin: 3.5rem;
+        width: 10rem;
+        height: 15rem;
+      }
+    }
+    section.form1 {
+      margin-bottom: 0;
+      margin-left: 3rem;
+      div.fo {
+        input {
+          width: 10rem;
+        }
+        textarea {
+          width: 10rem;
+          height: 10rem;
+        }
+        button {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    section.time1 {
+      margin-top: 10rem;
+      margin-left: 0.05rem;
+      margin-bottom: 0;
+      font-size: 1.25rem;
+      border-left: none;
+    }
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+}

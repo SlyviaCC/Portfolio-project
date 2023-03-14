@@ -1,0 +1,248 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", serif;
+}
+
+body img.bgi {
+  width: 50vw;
+  height: 150vh;
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1;
+}
+
+header nav {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px; /*贴在top为0这个位置*/
+  z-index: 5; /*为了防止被其他内容挡住*/
+  box-shadow: 0 5px 10px -1px grey;
+  border: 1px solid blue;
+}
+header nav ul {
+  width: 65vw;
+  margin: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+header nav ul li {
+  list-style-type: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+header nav ul li a:hover {
+  color: rgb(153, 59, 25);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.left {
+  margin: 3rem;
+  flex: 3 1 500px;
+}
+main section.left h1 {
+  color: #e08958;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+main section.left p {
+  font-size: 1.5rem;
+  padding: 0.3rem;
+}
+main section.right {
+  position: relative;
+  flex: 1 1 600px;
+}
+main section.right img {
+  position: absolute;
+  right: 18rem;
+  top: 15rem;
+  width: 16.5rem;
+  height: 16.5rem;
+  border-radius: 50%;
+}
+
+footer {
+  position: relative;
+  bottom: 2rem;
+  width: 100vw;
+  margin: 3rem;
+}
+footer img {
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+}
+
+main section.page2table {
+  display: flex;
+  flex: 2 1 400px;
+  flex-wrap: wrap;
+}
+main section.page2table table {
+  border-collapse: collapse;
+  font-size: 1.25rem;
+  margin-top: 3.5rem;
+  margin-left: 2.5rem;
+}
+main section.page2table table tr {
+  border-bottom: 2px solid rgba(224, 138, 88, 0.2156862745);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+main section.page2table table tr td {
+  padding: 0.95rem;
+  display: flex;
+}
+main section.page2table table tr:hover {
+  background-color: rgba(224, 138, 88, 0.2156862745);
+}
+main section.page2pic {
+  position: relative;
+  display: flex;
+  flex: 1 1 500px;
+}
+main section.page2pic img {
+  position: absolute;
+  right: 18rem;
+  top: 5rem;
+  width: 20vw;
+  height: 50vh;
+  z-index: 1;
+  box-shadow: 3.5rem 3rem 0.15rem #e08958;
+}
+
+main section.form1 {
+  margin: 5.5rem 3rem;
+  margin-left: 5rem;
+  font-size: 1.5rem;
+  height: 55vh;
+}
+main section.form1 div.fo {
+  display: flex;
+  flex: 1 1 700px;
+  justify-content: center;
+  align-content: space-around;
+  margin-bottom: 1rem;
+}
+main section.form1 div.fo button {
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.25rem;
+  margin-left: 3.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  background-color: #e08958;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+main section.form1 div.fo button:hover {
+  background-color: #f0803f;
+}
+main section.form1 div.fo input {
+  width: 25vw;
+  background-color: rgba(224, 138, 88, 0.5647058824);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 0.35rem;
+  font-size: 1.25rem;
+}
+main section.form1 div.fo textarea {
+  width: 25vw;
+  height: 15vh;
+  vertical-align: top;
+  background-color: rgba(224, 138, 88, 0.662745098);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.35rem;
+  font-size: 1.25rem;
+}
+main section.time1 {
+  margin: 5.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 600px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3.5rem;
+  border-left: 2px solid rgba(128, 128, 128, 0.453);
+  height: 55vh;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  img.bgi {
+    opacity: 0.5;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul li {
+    padding: 0.5rem 0;
+  }
+  main section.right {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  main section.right img {
+    position: static;
+    width: 15rem;
+    height: 15rem;
+  }
+  main section.page2pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section.page2pic img {
+    position: static;
+    margin: 3.5rem;
+    width: 10rem;
+    height: 15rem;
+  }
+  main section.form1 {
+    margin-bottom: 0;
+    margin-left: 3rem;
+  }
+  main section.form1 div.fo input {
+    width: 10rem;
+  }
+  main section.form1 div.fo textarea {
+    width: 10rem;
+    height: 10rem;
+  }
+  main section.form1 div.fo button {
+    margin-bottom: 1rem;
+  }
+  main section.time1 {
+    margin-top: 10rem;
+    margin-left: 0.05rem;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    border-left: none;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */
