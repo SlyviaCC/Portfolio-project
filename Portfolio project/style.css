@@ -19,7 +19,6 @@ header nav {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  position: -webkit-sticky;
   position: sticky;
   top: 0px; /*贴在top为0这个位置*/
   z-index: 5; /*为了防止被其他内容挡住*/
@@ -100,15 +99,22 @@ main section.page2table table {
   margin-left: 2.5rem;
 }
 main section.page2table table tr {
-  border-bottom: 2px solid rgba(224, 138, 88, 0.2156862745);
+  border-bottom: 3px solid rgba(224, 138, 88, 0.2156862745);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
 }
 main section.page2table table tr td {
+  width: 100%;
   padding: 0.95rem;
-  display: flex;
+}
+main section.page2table table tr td p .study {
+  width: 100%;
+  display: block;
+}
+main section.page2table table tr td.icon img {
+  margin: 0.35rem;
 }
 main section.page2table table tr:hover {
   background-color: rgba(224, 138, 88, 0.2156862745);

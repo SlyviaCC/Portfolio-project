@@ -100,14 +100,24 @@ main {
       margin-top: 3.5rem;
       margin-left: 2.5rem;
       tr {
-        border-bottom: 2px solid #e08a5837;
+        border-bottom: 3px solid #e08a5837;
         display: flex;
         justify-content: center;
         align-items: center;
         transition: all 0.3s ease;
         td {
+          width: 100%;
+          // white-space: pre-line;
+          // white-space: pre-wrap;
           padding: 0.95rem;
-          display: flex;
+          // display: flex;
+        }
+        td p .study {
+          width: 100%;
+          display: block;
+        }
+        td.icon img {
+          margin: 0.35rem;
         }
         &:hover {
           background-color: #e08a5837;
